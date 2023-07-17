@@ -25,3 +25,16 @@ console.log(str1+str2);//returns "Hello Adii"
 
 // ++a - prefix
 // a++ - postfix
+
+//***************COMPARISION OPERATORS**************//
+//returns boolean
+console.log(a>b);
+console.log(a<b);
+console.log(a>=b);
+console.log(a<=b);
+console.log(a==b);
+console.log(a!=b);
+
+
+
+
