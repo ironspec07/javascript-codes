@@ -40,3 +40,34 @@ function loginUserMessage(username){
 
 console.log(loginUserMessage("suhu"));
 console.log(loginUserMessage());//when u don't pass anything the output will be "undefined just logged in" 
+function calculateCartPrice(...num1){//...rest operator returns array of inputs
+    return num1
+} 
+console.log(calculateCartPrice(100,200,400,500));//returns - [100,200,400,500]
+
+function calculateCartPrice(val1,val2,...num1){//...rest operator returns array of inputs
+    return num1
+}
+console.log(calculateCartPrice(100,200,400,500));//returns - [400,500] as val1 takes 100 and val2 takes 200
+
+const item={
+    itemName:"ketchup",
+    price:199
+}
+ function handleObject(anyObject){
+    console.log(`item name is ${anyObject.itemName} and price is ${anyObject.price} `);
+ }
+
+//handleObject(item)
+handleObject({
+    itemName: "daliya",
+    price: 399
+})
+
+const myNewArray =[100,200,400,500]
+
+function returnsSecondValue(getArray){
+    return getArray[1]
+}
+
+returnsSecondValue(myNewArray)
