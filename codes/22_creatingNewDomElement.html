@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NEW DOM ELEMENT </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')//creates div element
+
+    console.log(div);// returns <div></div>
+
+    div.className = "main" // adding class to div 
+
+    div.id = "myId" //adding id to div
+
+    div.id = Math.round(Math.random() * 10 + 1)// creating a random id which changes each time we save the file.
+
+    div.setAttribute("title", "generated title")// creating custom attribute --> ("key" , "value")
+
+    div.style.backgroundColor = "green"//adding style elements to div.
+
+    div.style.padding = "12px" //adding style elements to div.
+    
+    //till now the created div is not showing on page because it is currently present in memory.
+
+    // div.innerText = "Chai aur code" --> adding text to div element
+
+    const addText = document.createTextNode("Chai aur code")
+    div.appendChild(addText) // another way of adding text to div element.
+
+    document.body.appendChild(div)//adding div to body. after this step the created div starts to show on screen.
+</script>
+</html>
