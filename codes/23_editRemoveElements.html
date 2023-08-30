@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){ //function to create li 
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)//appending li 
+    }
+    addLanguage("python")//executing addLanguage function
+    addLanguage("typescript") 
+
+    function addOptiLanguage(langName){//creating li in optimised way because in above method tree has to be traversed each time the function is called
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))//optimised way of creating li and adding value.
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    //EDITING VALUES
+    const secondLang = document.querySelector("li:nth-child(2)") //selecting second li element.
+    console.log(secondLang);
+    //secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"//another way of editing li
+    secondLang.replaceWith(newli)//replacing old value with new value
+
+    //2nd EDITING EXAMPLE
+    const firstLang = document.querySelector("li:first-child")//selecting first child
+    firstLang.outerHTML = '<li>TypeScript</li>'//Another way of editing value
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')//selecting last child
+    lastLang.remove()//removing last child.
+</script>
+</html>
