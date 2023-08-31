@@ -42,6 +42,12 @@
         #yellow {
             background: yellow;
         }
+        #red{
+            background: red;
+        }
+        #green{
+            background: green;
+        }
     </style>
 </head>
 
@@ -52,6 +58,8 @@
         <span class="button" id="white"></span>
         <span class="button" id="blue"></span>
         <span class="button" id="yellow"></span>
+        <span class="button" id="red"></span>
+        <span class="button" id="green"></span>
         <h2>Try clicking on one of the button above to change the background color of page</h2>
     </div>
     <script>
@@ -74,6 +82,12 @@
                         body.style.backgroundColor = e.target.id;
                         break;
                     case 'yellow':
+                        body.style.backgroundColor = e.target.id;
+                        break;
+                    case 'red':
+                        body.style.backgroundColor = e.target.id;
+                        break;
+                    case 'green':
                         body.style.backgroundColor = e.target.id;
                         break;
                 }
