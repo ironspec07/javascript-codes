@@ -27,17 +27,20 @@
       }
     </style>
   </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
-      >
-    </nav>
+  <body> 
     <div class="center">
       <div id="banner"><span>Your local time</span></div>
       <div id="clock"></div>
     </div>
-    <script src="chaiaurcode.js"></script>
+    <script>
+      const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock')
+
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+    </script>
   </body>
 </html>
