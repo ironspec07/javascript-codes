@@ -10,13 +10,13 @@ const promiseOne = new Promise(function(resolve, reject){
     // DB calls, cryptography, network
     setTimeout(function(){
         console.log('Async task is compelete');
-        resolve()
+        resolve()//connecting resolve with .then function
     }, 1000)
 })
-
 promiseOne.then(function(){
     console.log("Promise consumed");
 })
+
 
 new Promise(function(resolve, reject){
     setTimeout(function(){
@@ -24,7 +24,7 @@ new Promise(function(resolve, reject){
         resolve()
     }, 1000)
 
-}).then(function(){
+}).then(function(){//creating a promise and using .then fuction in one part rather than 2 parts as above.
     console.log("Async 2 resolved");
 })
 
@@ -54,7 +54,7 @@ const promiseFour = new Promise(function(resolve, reject){
     console.log(user);
     return user.username
 }).then((username) => {
-    console.log(username);
+    console.log(username);//---> CHAINING
 }).catch(function(error){
     console.log(error);
 }).finally(() => console.log("The promise is either resolved or rejected"))
