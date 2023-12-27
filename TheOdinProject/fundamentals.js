@@ -22,6 +22,7 @@
 
     console.log(result);
 // ===================================================================================================================
+const prompt = require("prompt-sync")({ sigint: true });
 let num = Number(prompt("Enter a number: "));
 
 function numberChecker() {
