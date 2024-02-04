@@ -1,4 +1,4 @@
-// document.getElementById("count-el").innerText = 5
+
 
 let count = 0
 
@@ -10,6 +10,11 @@ function decrement() {
     count--
     document.getElementById("count-el").innerText = count
 }
+function reset() {
+    count = 0
+    document.getElementById("count-el").innerText = count
+}
 function save() {
-    console.log(count);
+    document.getElementById("save-el").innerText += " "+ count
+    document.getElementById("save-el").innerText += ","
 }
