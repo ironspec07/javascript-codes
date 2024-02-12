@@ -29,3 +29,29 @@ h1 {
     cursor: pointer;
 
 }
+#new-btn {
+    width: auto;
+    background-color: goldenrod;
+    color: #016f32;
+    font-size: 40px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+
+}
+#reset-btn {
+    width: auto;
+    background-color: goldenrod;
+    color: #016f32;
+    font-size: 40px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+
+}
