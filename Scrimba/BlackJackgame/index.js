@@ -1,6 +1,6 @@
-let firstCard = 2 + Math.floor(Math.random() * 10);
+let firstCard = 1 + Math.floor(Math.random() * 13);
 
-let secondCard = 2 + Math.floor(Math.random() * 10);
+let secondCard = 1 + Math.floor(Math.random() * 13);
 
 let sum = firstCard + secondCard;
 
@@ -13,7 +13,7 @@ let sum_el = document.getElementById("sum-el");
 let cards_el = document.getElementById("cards-el");
 
 function startGame() {
-    cards_el.textContent += " " + firstCard + " ," + " " + secondCard;
+    cards_el.textContent += " " + firstCard + " ," + " " + secondCard + " ";
 
     sum_el.textContent += " " + sum;
 
@@ -30,7 +30,7 @@ function startGame() {
     document.getElementById("start-btn").disabled = true;
 }
 function newCard() {
-  let thirdCard = 2 + Math.floor(Math.random() * 10);
+  let thirdCard = 1 + Math.floor(Math.random() * 13);
 
     cards_el.textContent += ", " + thirdCard;
 
