@@ -5,7 +5,7 @@ let secondCard = 1 + Math.floor(Math.random() * 13);
 let sum = firstCard + secondCard;
 
 let hasBlackjack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 
 let message_el = document.getElementById("message-el");
@@ -19,6 +19,7 @@ function startGame() {
 
     if (sum < 21) {
     message = "Do you want to draw a new card? 🙂";
+    isAlive= true;
     } else if (sum === 21) {
     message = "Wohoo! You've got Blackjack! 🥳";
     hasBlackjack = true;
@@ -30,26 +31,29 @@ function startGame() {
     document.getElementById("start-btn").disabled = true;
 }
 function newCard() {
-  let thirdCard = 1 + Math.floor(Math.random() * 13);
+    if(isAlive===true && hasBlackjack===false){
 
-    cards_el.textContent += ", " + thirdCard;
-
-    sum += thirdCard;
-
-    sum_el.textContent = "Sum: " + sum;
-
-    if (sum < 21) {
-    message = "Do you want to draw a new card? 🙂";
-    } else if (sum === 21) {
-    message = "Wohoo! You've got Blackjack! 🥳";
-    hasBlackjack = true;
-    document.getElementById("new-btn").disabled = true;
-    } else {
-    message = "You're out of the game! 😭";
-    isAlive = false;
-    document.getElementById("new-btn").disabled = true;
+        let thirdCard = 1 + Math.floor(Math.random() * 13);
+        
+        cards_el.textContent += ", " + thirdCard;
+        
+        sum += thirdCard;
+        
+        sum_el.textContent = "Sum: " + sum;
+        
+        if (sum < 21) {
+            message = "Do you want to draw a new card? 🙂";
+        } else if (sum === 21) {
+            message = "Wohoo! You've got Blackjack! 🥳";
+            hasBlackjack = true;
+            document.getElementById("new-btn").disabled = true;
+        } else {
+            message = "You're out of the game! 😭";
+            isAlive = false;
+            document.getElementById("new-btn").disabled = true;
+        }
+        message_el.textContent = message;
     }
-    message_el.textContent = message;
 }
 function resetGame() {
     location.reload();
